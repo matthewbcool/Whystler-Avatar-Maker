@@ -1,22 +1,15 @@
 const fs = require("fs");
 const path = require("path");
 
-const neverRandomizeToNone = ["Torso", "Head", "Hands", "Eyes", "Mouth", "Eyebrows"];
+const neverRandomizeToNone = ["Torso", "Head", "Hands"];
 
 const assetOrder = [
   "Hair",
   "Head",
-  "Eyes",
-  "Eyebrows",
-  "Mouth",
-  "Facial Hair",
   "Hands",
   "Torso",
   "Torso Jacket",
   "Headwear",
-  "Eyewear",
-  "Earring",
-  "Accessory",
 ];
 
 const colors = [
@@ -32,6 +25,14 @@ const colors = [
   "white",
   "lavender",
   "mixed",
+  "green",
+  "purple",
+  "silver",
+  "dark",
+  "ginger",
+  "grey",
+  "blond",
+  "tan"
 ];
 
 const categoryDescription = {
@@ -71,24 +72,7 @@ const categoryDescription = {
       regExp: /style-[0-9a-z]-(.+)/,
     }
   },
-  Mouth: {
-    Type: {
-      regExp: /mouth_(.+)-skin/,
-      isPrimaryOption: true,
-    },
-    "Skin Tone": {
-      regExp: /skin-[0-9a-z]/,
-    }
-  },
-  "Facial Hair": {
-    Type: {
-      regExp: new RegExp(`facial-hair_(.+)-(${colors.join("|")})$`),
-      isPrimaryOption: true,
-    },
-    Color: {
-      regExp: new RegExp(`-(${colors.join("|")})$`),
-    }
-  },
+
   Torso: {
     Type: {
       regExp: /style-[0-9a-z]/,
@@ -119,24 +103,12 @@ const categoryDescription = {
 };
 
 const customRandomizationWeights = {
-  "Facial Hair": [
-    {value: null, randomizationWeight: {useLength: true}}
-  ],
   "Headwear": [
     {value: null, randomizationWeight: {value: 20}},
     {value: "headwear_spokemon-mixed", randomizationWeight: {value: 0.1}},
     {prefix: "headwear_hijab", randomizationWeight: {value: 0.05}}
   ],
-  "Eyewear": [
-    {value: null, randomizationWeight: {value: 20}}
-  ],
-  "Earring": [
-    {value: null, randomizationWeight: {useLength: true}}
-  ],
-  "Accessory": [
-    {value: "accessory_face-mask-1-animated", randomizationWeight: {value: 0.5}},
-    {value: "accessory_pool-mask-1", randomizationWeight: {value: 0.1}},
-  ],
+
   "Torso Jacket": [
     {value: null, randomizationWeight: {useLength: true}}
   ],
