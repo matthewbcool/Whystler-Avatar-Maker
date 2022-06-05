@@ -1,4 +1,5 @@
 import React from "react";
+import { MusicToggle } from "./MusicToggle";
 
 export const AvatarPartContainer = React.forwardRef(({ onKeyDown, isExpanded, children }, ref) => {
   return (

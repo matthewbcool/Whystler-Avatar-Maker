@@ -1,4 +1,5 @@
 import React from "react";
+import { MusicToggle } from "./MusicToggle";
 
 export function AvatarEditor({ thumbnailMode, leftPanel, rightPanel, buttonTip, toolbar }) {
   return (
@@ -7,6 +8,7 @@ export function AvatarEditor({ thumbnailMode, leftPanel, rightPanel, buttonTip, 
         {!thumbnailMode && leftPanel}
         {rightPanel}
         {buttonTip}
+        <MusicToggle />
       </div>
       {!thumbnailMode && toolbar}
     </>

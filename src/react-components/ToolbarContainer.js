@@ -16,7 +16,7 @@ function dispatchExportAvatar() {
 export function ToolbarContainer({ onGLBUploaded, randomizeConfig }) {
   return (
     <Toolbar>
-      <span className="appName">Hackweek Avatar Maker</span>
+      <span className="appName">Whystler Avatar Maker</span>
       <MoreMenu
         items={
           <>

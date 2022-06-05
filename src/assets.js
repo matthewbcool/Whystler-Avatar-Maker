@@ -1,4 +1,99 @@
 export default {
+  "Headwear": {
+    "parts": [
+      {
+        "value": null,
+        "displayName": "None",
+        "excludeFromRandomize": false,
+        "randomizationWeight": 20
+      },
+      {
+        "value": "headwear_bowler-black",
+        "displayName": "Bowler Black",
+        "description": {
+          "Type": "bowler",
+          "Color": "black"
+        }
+      },
+      {
+        "value": "headwear_bowler-grey",
+        "displayName": "Bowler Grey",
+        "description": {
+          "Type": "bowler",
+          "Color": "grey"
+        }
+      },
+      {
+        "value": "headwear_bowler-tan",
+        "displayName": "Bowler Tan",
+        "description": {
+          "Type": "bowler",
+          "Color": "tan"
+        }
+      },
+      {
+        "value": "headwear_smoking-black",
+        "displayName": "Smoking Black",
+        "description": {
+          "Type": "smoking",
+          "Color": "black"
+        }
+      },
+      {
+        "value": "headwear_smoking-blue",
+        "displayName": "Smoking Blue",
+        "description": {
+          "Type": "smoking",
+          "Color": "blue"
+        }
+      },
+      {
+        "value": "headwear_smoking-green",
+        "displayName": "Smoking Green",
+        "description": {
+          "Type": "smoking",
+          "Color": "green"
+        }
+      },
+      {
+        "value": "headwear_smoking-purple",
+        "displayName": "Smoking Purple",
+        "description": {
+          "Type": "smoking",
+          "Color": "purple"
+        }
+      },
+      {
+        "value": "headwear_smoking-red",
+        "displayName": "Smoking Red",
+        "description": {
+          "Type": "smoking",
+          "Color": "red"
+        }
+      }
+    ],
+    "description": {
+      "Type": {
+        "options": [
+          null,
+          "bowler",
+          "smoking"
+        ],
+        "isPrimaryOption": true
+      },
+      "Color": {
+        "options": [
+          "black",
+          "grey",
+          "tan",
+          "blue",
+          "green",
+          "purple",
+          "red"
+        ]
+      }
+    }
+  },
   "Hair": {
     "parts": [
       {
@@ -331,7 +426,7 @@ export default {
         "value": null,
         "displayName": "None",
         "excludeFromRandomize": false,
-        "randomizationWeight": 7
+        "randomizationWeight": 15
       },
       {
         "value": "torso-jacket_style-1-blackwool",
@@ -366,6 +461,22 @@ export default {
         }
       },
       {
+        "value": "torso-jacket_style-1-plaid-grey",
+        "displayName": "Style 1 Plaid Grey",
+        "description": {
+          "Type": "style-1",
+          "Outfit": "plaid-grey"
+        }
+      },
+      {
+        "value": "torso-jacket_style-1-plaid-tan",
+        "displayName": "Style 1 Plaid Tan",
+        "description": {
+          "Type": "style-1",
+          "Outfit": "plaid-tan"
+        }
+      },
+      {
         "value": "torso-jacket_style-1-redstriped",
         "displayName": "Style 1 Redstriped",
         "description": {
@@ -374,11 +485,59 @@ export default {
         }
       },
       {
+        "value": "torso-jacket_style-1-stripe-grey",
+        "displayName": "Style 1 Stripe Grey",
+        "description": {
+          "Type": "style-1",
+          "Outfit": "stripe-grey"
+        }
+      },
+      {
+        "value": "torso-jacket_style-1-stripe-midnight",
+        "displayName": "Style 1 Stripe Midnight",
+        "description": {
+          "Type": "style-1",
+          "Outfit": "stripe-midnight"
+        }
+      },
+      {
         "value": "torso-jacket_style-1-tanwool",
         "displayName": "Style 1 Tanwool",
         "description": {
           "Type": "style-1",
           "Outfit": "tanwool"
+        }
+      },
+      {
+        "value": "torso-jacket_style-1-wool-grey",
+        "displayName": "Style 1 Wool Grey",
+        "description": {
+          "Type": "style-1",
+          "Outfit": "wool-grey"
+        }
+      },
+      {
+        "value": "torso-jacket_style-1-wool-midnight",
+        "displayName": "Style 1 Wool Midnight",
+        "description": {
+          "Type": "style-1",
+          "Outfit": "wool-midnight"
+        }
+      },
+      {
+        "value": "torso-jacket_style-1-wool-tan-2",
+        "displayName": "Style 1 Wool Tan 2",
+        "description": {
+          "Type": "style-1",
+          "Outfit": "wool-tan-2"
+        }
+      },
+      {
+        "value": "torso-jacket_style-1-wool-tan",
+        "displayName": "Style 1 Wool Tan",
+        "description": {
+          "Type": "style-1",
+          "Outfit": "wool-tan"
         }
       }
     ],
@@ -396,8 +555,16 @@ export default {
           "bluebrocade",
           "greenplaid",
           "greywool",
+          "plaid-grey",
+          "plaid-tan",
           "redstriped",
-          "tanwool"
+          "stripe-grey",
+          "stripe-midnight",
+          "tanwool",
+          "wool-grey",
+          "wool-midnight",
+          "wool-tan-2",
+          "wool-tan"
         ]
       }
     },
@@ -407,99 +574,41 @@ export default {
       "secondaryOption": "Outfit"
     }
   },
-  "Headwear": {
+  "Legs": {
     "parts": [
       {
         "value": null,
         "displayName": "None",
-        "excludeFromRandomize": false,
-        "randomizationWeight": 20
+        "excludeFromRandomize": false
       },
       {
-        "value": "headwear_bowler-black",
-        "displayName": "Bowler Black",
-        "description": {
-          "Type": "bowler",
-          "Color": "black"
-        }
+        "value": "legs_knickers-boots-grey",
+        "displayName": "Knickers Boots Grey"
       },
       {
-        "value": "headwear_bowler-grey",
-        "displayName": "Bowler Grey",
-        "description": {
-          "Type": "bowler",
-          "Color": "grey"
-        }
+        "value": "legs_knickers-boots-tan",
+        "displayName": "Knickers Boots Tan"
       },
       {
-        "value": "headwear_bowler-tan",
-        "displayName": "Bowler Tan",
-        "description": {
-          "Type": "bowler",
-          "Color": "tan"
-        }
+        "value": "legs_knickers-plaid-grey",
+        "displayName": "Knickers Plaid Grey"
       },
       {
-        "value": "headwear_smoking-black",
-        "displayName": "Smoking Black",
-        "description": {
-          "Type": "smoking",
-          "Color": "black"
-        }
+        "value": "legs_knickers-plaid-tan",
+        "displayName": "Knickers Plaid Tan"
       },
       {
-        "value": "headwear_smoking-blue",
-        "displayName": "Smoking Blue",
-        "description": {
-          "Type": "smoking",
-          "Color": "blue"
-        }
+        "value": "legs_knickers-wool-grey",
+        "displayName": "Knickers Wool Grey"
       },
       {
-        "value": "headwear_smoking-green",
-        "displayName": "Smoking Green",
-        "description": {
-          "Type": "smoking",
-          "Color": "green"
-        }
+        "value": "legs_knickers-wool-midnight",
+        "displayName": "Knickers Wool Midnight"
       },
       {
-        "value": "headwear_smoking-purple",
-        "displayName": "Smoking Purple",
-        "description": {
-          "Type": "smoking",
-          "Color": "purple"
-        }
-      },
-      {
-        "value": "headwear_smoking-red",
-        "displayName": "Smoking Red",
-        "description": {
-          "Type": "smoking",
-          "Color": "red"
-        }
+        "value": "legs_knickers-wool-tan",
+        "displayName": "Knickers Wool Tan"
       }
-    ],
-    "description": {
-      "Type": {
-        "options": [
-          null,
-          "bowler",
-          "smoking"
-        ],
-        "isPrimaryOption": true
-      },
-      "Color": {
-        "options": [
-          "black",
-          "grey",
-          "tan",
-          "blue",
-          "green",
-          "purple",
-          "red"
-        ]
-      }
-    }
+    ]
   }
 };
