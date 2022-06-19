@@ -26,6 +26,10 @@ const colors = [
   "grey",
   "blond",
   "tan",
+  "curly",
+  "grizzled",
+  "deep",
+  "medium",
 ];
 
 const categoryDescription = {
@@ -34,17 +38,14 @@ const categoryDescription = {
       regExp: new RegExp(`hair_(.+)-(${colors.join("|")})$`),
       isPrimaryOption: true,
     },
-    Color: {
+    Hairtype: {
       regExp: new RegExp(`-(${colors.join("|")})$`),
     },
   },
   Head: {
     Type: {
-      regExp: /head_(.+)-skin/,
+      regExp: /head_(.+)_[0-9a-z][0-9a-z]?/,
       isPrimaryOption: true,
-    },
-    "Skin Tone": {
-      regExp: /skin-[0-9a-z]/,
     },
   },
   Eyes: {
