@@ -35,7 +35,7 @@ const colors = [
 const categoryDescription = {
   Hair: {
     Type: {
-      regExp: new RegExp(`hair_(.+)-(${colors.join("|")})$`),
+      regExp: /_[a-zA-Z]+/,
       isPrimaryOption: true,
     },
     Hairtype: {
@@ -44,7 +44,7 @@ const categoryDescription = {
   },
   Head: {
     Type: {
-      regExp: /head_(.+)_[0-9a-z][0-9a-z]?/,
+      regExp: /head_(.+)-[0-9a-z][0-9a-z]?/,
       isPrimaryOption: true,
     },
   },
