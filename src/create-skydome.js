@@ -29,11 +29,11 @@ void main() {
 }
 `;
 
-  const offset = radius / 12;
+  const offset = radius / 40;
 
   const uniforms = {
-    topColor: { value: new THREE.Color(0x9a7a5b) }, // TODO: match primary color
-    bottomColor: { value: new THREE.Color(0x4d3d2d) },
+    topColor: { value: new THREE.Color(0xfdd835) }, // TODO: match primary color
+    bottomColor: { value: new THREE.Color(0x795548) },
     offset: { value: offset },
     exponent: { value: 1.0 },
   };

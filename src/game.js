@@ -120,14 +120,13 @@ function init() {
   camera.position.set(0, 0.6, 1);
   state.camera = camera;
 
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 4.0);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 1.0);
   directionalLight.position.set(10, 20, 5);
   scene.add(directionalLight);
 
   // TODO: Square this with react
   const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("scene"), antialias: true });
   renderer.physicallyCorrectLights = true;
-  renderer.gammaOutput = true;
   state.renderer = renderer;
 
   state.clock = new THREE.Clock();
@@ -157,7 +156,7 @@ function playClips(scene, clips) {
   const mixer = new THREE.AnimationMixer(scene);
 
   for (const clip of clips) {
-    const animation = scene.animations.find(a => a.name === clip)
+    const animation = scene.animations.find((a) => a.name === clip);
     if (animation) {
       const action = mixer.clipAction(animation);
       action.play();
@@ -354,7 +353,7 @@ function tick(time) {
 
       // Reset all idle eyes animations before cloning or exporting the avatar
       // so that we don't export it mid-blink.
-      Object.values(state.idleEyesMixers).forEach(mixer => {
+      Object.values(state.idleEyesMixers).forEach((mixer) => {
         mixer.setTime(0);
       });
 
