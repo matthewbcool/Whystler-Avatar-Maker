@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import constants from "../constants";
-import { generateWave } from "../utils";
 import { ToolbarContainer } from "./ToolbarContainer";
 import { ButtonTip } from "./ButtonTip";
 import { AvatarPreviewContainer } from "./AvatarPreviewContainer";
@@ -30,13 +29,6 @@ export function AvatarEditorContainer() {
       dispatch(constants.avatarConfigChanged, { avatarConfig: { ...avatarConfig, ...hoveredConfig } });
     }
     dispatch(constants.reactIsLoaded);
-  });
-
-  // TODO: Save the wave to a static image, or actually do some interesting animation with it.
-  useEffect(async () => {
-    if (canvasUrl === null) {
-      setCanvasUrl(await generateWave());
-    }
   });
 
   function updateAvatarConfig(newConfig) {
@@ -104,7 +96,7 @@ export function AvatarEditorContainer() {
 
     updateAvatarConfig({ [category]: url });
   }
-
+  //TODO: decide if we want randomize function
   function randomizeConfig() {
     setAvatarConfig(generateRandomConfig(assets));
   }
@@ -137,7 +129,7 @@ export function AvatarEditorContainer() {
         ),
         rightPanel: <AvatarPreviewContainer {...{ thumbnailMode, canvasUrl }} />,
         buttonTip: <ButtonTip {...tipState} />,
-        toolbar: <ToolbarContainer {...{ onGLBUploaded, randomizeConfig }} />,
+        toolbar: <ToolbarContainer {...{ randomizeConfig }} />,
       }}
     />
   );

@@ -1,7 +1,5 @@
 import React from "react";
 import { Toolbar } from "./Toolbar";
-import { UploadButton } from "./UploadButton";
-
 import { dispatch } from "../dispatch";
 import constants from "../constants";
 
@@ -13,11 +11,9 @@ function dispatchExportAvatar() {
   dispatch(constants.exportAvatar);
 }
 
-export function ToolbarContainer({ onGLBUploaded, randomizeConfig }) {
+export function ToolbarContainer({ randomizeConfig }) {
   return (
     <Toolbar>
-      <span className="appName">Whystler Avatar Maker</span>
-
       <button onClick={randomizeConfig}>Randomize avatar</button>
       <button onClick={dispatchResetView}>Reset camera view</button>
       <button onClick={dispatchExportAvatar} className="primary">
