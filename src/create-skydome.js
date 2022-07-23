@@ -32,8 +32,8 @@ void main() {
   const offset = radius / 40;
 
   const uniforms = {
-    topColor: { value: new THREE.Color(0xfdd835) }, // TODO: match primary color
-    bottomColor: { value: new THREE.Color(0x795548) },
+    topColor: { value: new THREE.Color(0xffffff) }, // TODO: match primary color
+    bottomColor: { value: new THREE.Color(0xffffff) },
     offset: { value: offset },
     exponent: { value: 1.0 },
   };

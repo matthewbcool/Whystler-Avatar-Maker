@@ -52,7 +52,7 @@ body,
 }
 
 .selector .simpleBar {
-  padding: 32px 64px;
+  padding: 32px 12px;
 }
 
 .main {
@@ -210,7 +210,6 @@ label {
   justify-content: flex-end;
   align-items: center;
   background-color: var(--toolbar-bg-color);
-  border-top: 2px solid lightgrey;
 }
 
 .toolbar button,
@@ -237,6 +236,7 @@ button.primary {
   border-color: var(--primary-blue);
   color: white;
 }
+
 button.primary:hover,
 button.primary:focus {
   background-color: lightblue;
@@ -280,27 +280,6 @@ button.primary:focus {
 
 .menu a {
   margin: 10px 0;
-}
-
-@keyframes wave {
-  from {
-    background-position-y: 0;
-  }
-  to {
-    background-position-y: 400px;
-  }
-}
-
-.waveContainer {
-  /*  position: absolute;
-  width: 60px;
-  height: 100%;
-  pointer-events: none;
-  background-repeat: repeat-y;
-  animation: wave 6s infinite;
-  animation-timing-function: cubic-bezier(0.2, 0.52, 0.79, 0.49);
-  /* Move 1 pixel to the left to workaround rendering issue in FF linux */
-  left: -1px;
 }
 
 .music {

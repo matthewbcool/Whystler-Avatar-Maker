@@ -10,6 +10,12 @@ import { generateRandomConfig } from "../generate-random-config";
 import initialAssets from "../assets";
 import { isThumbnailMode } from "../utils";
 import debounce from "../utils/debounce";
+import PipeHorizontal from "./PipeHorizontal";
+import PipeCornerTopLeft from "./PipeCornerTopLeft";
+import PipeCornerTopRight from "./PipeCornerTopRight";
+import PipeCornerBottomLeft from "./PipeCornerBottomLeft";
+import PipeCornerBottomRight from "./PipeCornerBottomRight";
+import PipeVertical from "./PipeVertical";
 
 // Used externally by the generate-thumbnails script
 const thumbnailMode = isThumbnailMode();
@@ -102,35 +108,37 @@ export function AvatarEditorContainer() {
   }
 
   return (
-    <AvatarEditor
-      {...{
-        thumbnailMode,
-        leftPanel: (
-          <AvatarConfigurationPanel
-            {...{
-              avatarConfig,
-              assets,
-              onScroll: () => {
-                hideTip();
-              },
-              onSelectAvatarPart: ({ categoryName, part }) => {
-                updateAvatarConfig({ [categoryName]: part.value });
-              },
-              onHoverAvatarPart: ({ categoryName, part, tip, rect }) => {
-                debouncedSetHoveredConfig({ [categoryName]: part.value });
-                showTip(tip, rect.bottom, rect.left + rect.width / 2);
-              },
-              onUnhoverAvatarPart: () => {
-                debouncedSetHoveredConfig({});
-                hideTip();
-              },
-            }}
-          />
-        ),
-        rightPanel: <AvatarPreviewContainer {...{ thumbnailMode, canvasUrl }} />,
-        buttonTip: <ButtonTip {...tipState} />,
-        toolbar: <ToolbarContainer {...{ randomizeConfig }} />,
-      }}
-    />
+    <div className="avatar-editor">
+      <AvatarEditor
+        {...{
+          thumbnailMode,
+          leftPanel: (
+            <AvatarConfigurationPanel
+              {...{
+                avatarConfig,
+                assets,
+                onScroll: () => {
+                  hideTip();
+                },
+                onSelectAvatarPart: ({ categoryName, part }) => {
+                  updateAvatarConfig({ [categoryName]: part.value });
+                },
+                onHoverAvatarPart: ({ categoryName, part, tip, rect }) => {
+                  debouncedSetHoveredConfig({ [categoryName]: part.value });
+                  showTip(tip, rect.bottom, rect.left + rect.width / 2);
+                },
+                onUnhoverAvatarPart: () => {
+                  debouncedSetHoveredConfig({});
+                  hideTip();
+                },
+              }}
+            />
+          ),
+          rightPanel: <AvatarPreviewContainer {...{ thumbnailMode, canvasUrl }} />,
+          buttonTip: <ButtonTip {...tipState} />,
+          toolbar: <ToolbarContainer {...{ randomizeConfig }} />,
+        }}
+      />
+    </div>
   );
 }

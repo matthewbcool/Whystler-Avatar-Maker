@@ -17,7 +17,7 @@ export function ToolbarContainer({ randomizeConfig }) {
       <button onClick={randomizeConfig}>Randomize avatar</button>
       <button onClick={dispatchResetView}>Reset camera view</button>
       <button onClick={dispatchExportAvatar} className="primary">
-        Export avatar
+        Export
       </button>
     </Toolbar>
   );
